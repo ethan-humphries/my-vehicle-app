@@ -12,4 +12,9 @@ export class HelpComponent implements OnInit {
   ngOnInit() {
   }
 
+  visable : boolean =  false;
+
+  makeVisible(){
+    this.visable = !this.visable;
+  }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { VehicleDataService } from '../services/vehicle-data.service';
 import { Vehicle } from '../classes/Vehicle.class';
 import { FormsModule } from '@angular/forms';
 
@@ -20,7 +20,7 @@ export class NewVehicleComponent implements OnInit {
     year: null,
   }
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: VehicleDataService) { }
 
   ngOnInit() {
     this.vehicles = this.dataService.getVehicles();

@@ -1,0 +1,163 @@
+<form class = "card card-body mb-3">
+<h3>Pre-Start Checklist</h3><br>
+    <div class = "form-row mb-3">
+      <div class = "col">
+        <input type = "text" class="form-control" required name = "registration" placeholder = "Registration">
+      </div>
+      <div class = "col">
+        <input type = "text" class="form-control" placeholder = "Operator">
+      </div>
+    </div>
+
+    <div class = "form-row mb-3">
+      <div class = "col">
+        <input type = "text" name = "location" class="form-control" placeholder = "Vehicle Location">
+      </div>
+      <div class ="col">
+        <select class="form-control"  name="type"  placeholder="Vehicle Type">
+            <option value= "Plant">Plant</option>
+            <option value = "Road">Road</option>
+        </select>
+      </div>
+    </div>
+   <input type = "date" class="form-control" data-date-format="dd/mm/yyyy"><br>
+
+  <!-- begin checklist -->
+  <div class = "card card-body mb-3">
+    <div class = "form-group">
+      <!-- sets of 3 to help me read -->     
+      <h4 >Equipment & Fittings</h4>
+      <div class="form-check form-check-inline m-2">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox"value="Rotating Beacon"> Rotating Beacon
+        </label>
+      </div>
+      <div class="form-check form-check-inline m-2">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="Brake Lights"> Brake Lights
+        </label>
+      </div>
+      <div class="form-check form-check-inline m-2">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="Brakes"> Brakes
+          </label>
+        </div>
+      <!-- sets of 3 to help me read -->
+      <div class="form-check form-check-inline m-2">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="Turn Lights"> Turn Lights
+        </label>
+      </div>
+      <div class="form-check form-check-inline m-2">
+      <label class="form-check-label">
+          <input class="form-check-input" type="checkbox"value="Head Lights"> Head Lights
+        </label>
+      </div>
+      <div class="form-check form-check-inline m-2">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="Tail Lights"> Tail Lights
+        </label>
+      </div>
+      <!-- sets of 3 to help me read -->
+      <div class="form-check form-check-inline m-2">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="Number Plate Lights"> Number Plate Lights
+        </label>
+      </div>
+      <div class="form-check form-check-inline m-2">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="Clearence Lights"> Clearence Lights
+        </label>
+      </div>
+      <div class="form-check form-check-inline m-2">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="Reflectors"> Reflectors
+        </label>
+      </div>
+      <!-- sets of 3 to help me read -->
+      <div class="form-check form-check-inline m-2">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="Reflective Tape">Reflective Tape
+          </label>
+        </div>
+      <div class="form-check form-check-inline m-2">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="Mirrors"> Mirrors
+        </label>
+      </div>
+      <div class="form-check form-check-inline m-2">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="Horn"> Horn
+        </label>
+      </div>
+      <!-- sets of 3 to help me read -->
+      <div class="form-check form-check-inline m-2">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="Mudguards"> Mudguards
+          </label>
+        </div>
+      <div class="form-check form-check-inline m-2">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="Chain Guards"> Chain Guards
+        </label>
+      </div>
+      <div class="form-check form-check-inline m-2">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="Tracks"> Tracks
+        </label>
+      </div>
+      <!-- sets of 3 to help me read -->
+      <div class="form-check form-check-inline m-2">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="Hydraulics"> Hydraulics
+          </label>
+        </div>
+      <div class="form-check form-check-inline m-2">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="Windscreen/Windows"> Windscreen/Windows
+        </label>
+      </div>
+      <div class="form-check form-check-inline m-2">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="Steering"> Steering
+        </label>
+      </div>
+      <div class="form-check form-check-inline m-2">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="Tyres"> Tyres
+          </label>
+        </div>
+    </div>
+  </div>
+
+  <div class = "card card-body mb-3">
+    <h4>Permits</h4>
+    <label>For oversized/deminsion vehicles operating on/near roads have permits been obtained?</label>
+    <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" value="Yes"> Yes
+      </label>
+      <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="No"> No
+      </label>
+      <div class="custom-file">
+        <input type="file" class="btn btn-block btn-outline-secondary" (click)="clicked=true"  id="validatedCustomFile" [ngClass]="{'btn-outline-success' : clicked}">
+      </div>
+  </div>
+
+  <div class = "card card-body mb-3">
+    <h4>Declaration & Comments</h4>
+    <label>I declare the vehicle is safe to use prior to operation:</label>
+    <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" value="Yes"> Yes
+      </label>
+    <textarea rows = "5"  class="form-control m-3" placeholder = "Comments"></textarea>
+  </div>
+  <br>
+    <div>
+        <button class ="btn btn-block btn-primary mb-3" (click)=doSomething()>Submit</button>
+    </div>  
+    <div *ngIf="submitted">
+      <label class = "alert alert-success">{{message}}</label>
+    </div>
+</form>
+

@@ -1,1 +1,2 @@
-<footer class = "fixed-bottom font-small blue pt-4"><button class = "btn btn-help btn-info btn-block">Need Help?</button></footer>
+<footer class = "fixed-bottom font-small blue pt-4"><a class = "btn btn-help btn-info btn-block" routerLink = "help-information" (click) = "makeVisible()">Need Help?</a></footer>
+<router-outlet *ngIf=visable></router-outlet>

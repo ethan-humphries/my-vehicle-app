@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { DataService } from '../services/data.service';
+import { VehicleDataService } from '../services/vehicle-data.service';
 import { Vehicle } from '../classes/Vehicle.class';
 
 @Component({
@@ -11,7 +11,7 @@ export class ViewVehiclesComponent implements OnInit {
   
   vehicles : Vehicle[];
 
-  constructor(private dataService: DataService) { 
+  constructor(private dataService: VehicleDataService) { 
 
   }
 

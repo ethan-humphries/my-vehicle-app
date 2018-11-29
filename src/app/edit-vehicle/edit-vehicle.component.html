@@ -3,13 +3,52 @@
     <h4>Edit Vehicle(s)</h4>
     <div class = "form-inline">
         <label for="registration"class = "col-sm-2 col-form-label">Choose a Vehicle</label>
-        <select class="form-control form-control-lg" [(ngModel)]="vehicle.registration" name="registration" #name="ngModel">
+        <select class="form-control form-control-lg" (click) = "reset()" [(ngModel)]="vehicle.registration" name="registration" #name="ngModel">
           <option value = {{vehicle.registration}} *ngFor=" let vehicle of vehicles" >{{vehicle.registration}}</option>
         </select>
     </div>
-    <br>
+
+    <h4 matPrefix>New Vehicle Details</h4>
+    <div class = "form-group">
+        <label for="make">Make</label>
+        <input type = "text" [(ngModel)]="vehicle.make" name="make" #make="ngModel"
+        class="form-control" placeholder = "Enter the make..." required>
+    </div>
+
+    <div class = "form-group">
+      <label for="model">Model</label>
+      <input type = "text" [(ngModel)]="vehicle.model" name = "model" #model="ngModel"
+      class="form-control" placeholder = "Enter the model..." required>
+    </div>
+
+    <div class = "form-group">
+      <label for="bodyType">Body Type</label>
+      <select class="form-control" [(ngModel)]="vehicle.bodyShape" name="bodyType" #bodyShape="ngModel" placeholder = "Body Type" required>
+          <option value= "Van">Van</option>
+          <option value = "Ute">Ute</option>
+          <option value= "Sedan">Sedan</option>
+          <option value = "Hatch">Hatch</option>
+      </select>
+    </div>
+  
+    <div class = "form-group">
+      <label for="transmission">Transmission</label>
+      <select class="form-control" [(ngModel)]="vehicle.transmission" name="transmission" #transmission="ngModel" placeholder = "Transmission" required>
+          <option value= "Manual">Manual</option>
+          <option value = "Automatic">Automatic</option>
+      </select>
+    </div>  
+
+    <div class = "form-group">
+      <label for="year">Year (optional)</label>
+      <input type = "number" [(ngModel)]="vehicle.year" name="year" #year="ngModel" class="form-control" placeholder = "xxxx">
+    </div>
     <div>
-      {{this.vehicle.registration}}
+        <button class = "btn btn-block btn-primary mb-3" (click) = "updateVehicle(this.vehicle)">Update</button>
+    </div>  
+    <div *ngIf="submitted">
+      <span class="btn-block alert alert-success mb-3">{{message}}: {{vehicle.registration}} {{vehicle.make}} {{vehicle.model}} {{vehicle.bodyShape}} </span>
     </div>
   </form>
 </div>
+
